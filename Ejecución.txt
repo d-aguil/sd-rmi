@@ -1,0 +1,14 @@
+#compilamos
+java rmi/*.java -d target
+
+#nos movemos al directorio con las clases compiladas
+cd target
+
+#ejecutamos el registro en segundo plano
+rmiregistry &
+
+#ejecutamos el servidor
+java rmi.Servidor
+
+#ejecutamos el cliente
+java rmi.Cliente
